@@ -3,8 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors</title>
   </head>
-  <body></body>
+  <body>
+      <header>
+         <h1>Rock Paper Scissors!</h1> 
+      </header>
+      <div class="score-board">
+          <div class="badge" id="user-label">user</div>
+          <div class="badge" id="comp-label">comp</div>
+          <span id="user-score">0</span>:<span id="computer-score">0</span>
+      </div>
+      <div class="result">
+          <p>Paper covers Rock. You Win!</p>
+    </div>
+    <div class="choices">
+        <div class="choice">
+            <img src="assets/Rock.png" alt="rock" id="rock-btn">
+        </div>
+        <div class="choice">
+            <img src="assets/Paper.png" alt="paper" id="paper-btn">
+        </div>
+        <div class="choice">
+            <img src="assets/Scissors.png" alt="scissors" id="scissors-btn">
+        </div>
+    </div>
+    <p id="act-message">Make your move.</p>
+  </body>
 </html>
