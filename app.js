@@ -72,26 +72,26 @@ const appController = (function UI(logicCtrl, UIctrl) {
     return function usrMoveCols() {
       if (mvType === 'rock') {
         console.log('You used rock!');
-        const winner = logicController.findWinner(mvType);
+        const winner = logicCtrl.findWinner(mvType);
         if (winner !== 'draw') {
-          logicController.updateScore(winner);
-          const scores = logicController.getScores();
+          logicCtrl.updateScore(winner);
+          const scores = logicCtrl.getScores();
           UIctrl.dispScore(scores);
         }
       } else if (mvType === 'paper') {
         console.log('You used paper!');
-        const winner = logicController.findWinner(mvType);
+        const winner = logicCtrl.findWinner(mvType);
         if (winner !== 'draw') {
-          logicController.updateScore(winner);
-          const scores = logicController.getScores();
+          logicCtrl.updateScore(winner);
+          const scores = logicCtrl.getScores();
           UIctrl.dispScore(scores);
         }
       } else if (mvType === 'scissor') {
         console.log('You used scissor!');
-        const winner = logicController.findWinner(mvType);
+        const winner = logicCtrl.findWinner(mvType);
         if (winner !== 'draw') {
-          logicController.updateScore(winner);
-          const scores = logicController.getScores();
+          logicCtrl.updateScore(winner);
+          const scores = logicCtrl.getScores();
           UIctrl.dispScore(scores);
         }
       }
