@@ -53,9 +53,7 @@ const UIController = (function UI() {
     scissorID: document.getElementById('scissors-btn'),
   };
   return {
-    dispScore(scores) {
-      const usrScr = scores[0];
-      const compScr = scores[1];
+    dispScore(usrScr, compScr) {
       DOMlists.userScore.textContent = usrScr;
       DOMlists.compScore.textContent = compScr;
     },
@@ -76,7 +74,7 @@ const appController = (function UI(logicCtrl, UIctrl) {
         if (winner !== 'draw') {
           logicCtrl.updateScore(winner);
           const scores = logicCtrl.getScores();
-          UIctrl.dispScore(scores);
+          UIctrl.dispScore(...scores);
         }
       } else if (mvType === 'paper') {
         console.log('You used paper!');
@@ -84,7 +82,7 @@ const appController = (function UI(logicCtrl, UIctrl) {
         if (winner !== 'draw') {
           logicCtrl.updateScore(winner);
           const scores = logicCtrl.getScores();
-          UIctrl.dispScore(scores);
+          UIctrl.dispScore(...scores);
         }
       } else if (mvType === 'scissor') {
         console.log('You used scissor!');
@@ -92,7 +90,7 @@ const appController = (function UI(logicCtrl, UIctrl) {
         if (winner !== 'draw') {
           logicCtrl.updateScore(winner);
           const scores = logicCtrl.getScores();
-          UIctrl.dispScore(scores);
+          UIctrl.dispScore(...scores);
         }
       }
     };
